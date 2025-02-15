@@ -1,0 +1,21 @@
+package com.ait.service;
+
+import java.util.List;
+
+import com.ait.bean.TicketResponse;
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+public interface MakeMyTripTrainService {
+
+	public Flux<TicketResponse> getAllTicketFromIRCTC();
+	//public Mono<List<TicketResponse>> getAllTicketFromIRCTC();
+	public TicketResponse bookTicket(TicketResponse ticketResponse) throws JsonProcessingException;
+	
+	public TicketResponse updateTicket(TicketResponse ticketResponse) throws JsonProcessingException;
+	public void deleteTicket(Long id);
+
+	public Mono<TicketResponse> getTicketById(Long id);
+}

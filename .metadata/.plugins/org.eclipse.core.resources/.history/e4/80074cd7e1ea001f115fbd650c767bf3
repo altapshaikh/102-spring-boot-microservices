@@ -1,0 +1,56 @@
+package com.ait.controller;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ait.bean.TicketResponse;
+import com.ait.service.MakeMyTripTrainService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+public class MakeMyTripTrainController {
+	@Autowired
+	MakeMyTripTrainService trainService;
+
+	@GetMapping
+	public  List<TicketResponse> getTicket() {
+		  List<TicketResponse> block = trainService.getAllTicketFromIRCTC().block();
+	return block;
+	}
+	@GetMapping(value="/ticket/{id}")
+	public Mono<TicketResponse> getTicketById(@PathVariable Long id) {
+ Mono<TicketResponse> ticketById = trainService.getTicketById(id);
+		return ticketById;
+	}
+
+	@PostMapping(value = "/create")
+	public ResponseEntity<TicketResponse> createTicket(@RequestBody TicketResponse ticket)
+			throws JsonProcessingException {
+		TicketResponse bookTicket = trainService.bookTicket(ticket);
+		return ResponseEntity.ok(bookTicket);
+	}
+
+	@PutMapping(value = "/update")
+	public TicketResponse updateTicket(@RequestBody TicketResponse ticket) throws JsonProcessingException {
+		TicketResponse updateTicket = trainService.updateTicket(ticket);
+		return updateTicket;
+	}
+	@DeleteMapping("/delete/{id}")
+	public void cancelTciket(@PathVariable Long id) {
+		trainService.deleteTicket(id);
+	}
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;14-spring-boot-data-jpa-generator&apos;&#x0D;&#x0A;- Original project: &apos;14-spring-boot-data-jpa-generator&apos;&#x0D;&#x0A;- Original element: &apos;14-spring-boot-data-jpa-generator/src/main/java/com.ait.bean&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ait.bean" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1734533094526" subPackages="false" version="1.0"/>
+</session>

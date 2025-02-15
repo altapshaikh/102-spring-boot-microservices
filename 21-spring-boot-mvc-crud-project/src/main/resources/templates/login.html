@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .bg-img {
+            /* The image used */
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS699baS691BrXTYQOTpm6kh1yoOSE_A_264S-17AgIGWGJs8AhkMWsPgVSWdM3JvQ7xk&usqp=CAU");
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .text-color{
+            color: #fffa10;
+        }
+    </style>
+</head>
+
+<hr>
+<hr>
+</hr>
+
+<body>
+    <div class="bg-img">
+        <div class="col-md-4"></div>
+
+        <div class="container col-md-5">
+            <h1 class="text-danger text-color">Admin Login</h1>
+            <p th:text="${msg}"></p>
+            
+            <!-- Ensure you have the login object available for form binding -->
+            <form  th:action="@{/login}"  method="post" th:object="${login}">
+                
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email" class="text-color">Email:</label>
+                    <input type="email" id="email" class="form-control" th:field="*{email}" placeholder="Enter your email" />
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password" class="text-color">Password:</label>
+                    <input type="password" id="password" class="form-control" th:field="*{password}" placeholder="Enter your password" />
+                    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

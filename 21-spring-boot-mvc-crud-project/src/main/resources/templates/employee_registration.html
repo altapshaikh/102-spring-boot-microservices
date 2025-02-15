@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Employee Registration</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg bg-primary">
+		  <div class="container-fluid">
+		    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		      <div class="navbar-nav">
+		        <a class="nav-link  bg-dark" aria-current="page" th:href="@{/list}">
+					<button type="button" class="btn btn-danger">Home</button></a>
+					
+					<a class="nav-link  bg-dark" aria-current="page" th:href="@{/register}">
+								<button type="button" class="btn btn-danger">Register</button></a>
+								
+					<a class="nav-link  bg-dark" aria-current="page" th:href="@{/logout}">
+								<button type="button" class="btn btn-danger">Log out</button></a>
+		        
+		      </div>
+		    </div>
+		  </div>
+		</nav>
+<hr>
+<hr>
+</hr>
+<h1 class="text-danger">Employee Registration</h1>
+<div class="alert alert-primary" role="alert">
+  <p class="alert alert-primary" th:text="*{msg}"></p>
+</div>
+<div class="row">
+	<form th:action="{/save"} method="post" th:object="${employee}">
+		<div class="col-md-1"></div>
+		<div class="col-md-5">
+			<input type="hidden" id="empId" class="form-control" th:field="*{empId}"/>
+			<div class="form-group">
+				<label for="firstName">First Name:</label>
+				<input type="text" id="firstName" class="form-control" th:field="*{firstName}"
+					placeholder="enter your first name" required />
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" id="password" class="form-control" th:field="*{password}"
+					placeholder="enter password" required />
+			</div>
+
+			<div class="form-group">
+				<label for="gender">Gender:</label>
+				<input type="radio" th:field="*{gender}" value="Male" />Male
+				<input type="radio" th:field="*{gender}" value="Female" />Female
+			</div>
+
+
+		</div>
+		<div class="col-md-5">
+			<div class="form-group">
+				<label for="lastName">Last Name:</label>
+				<input type="text" id="lastName" class="form-control" th:field="*{lastName}"
+					placeholder="enter your last  name" required />
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" class="form-control" th:field="*{email}" placeholder="enter your email"
+					required />
+			</div>
+
+			<div class="form-group">
+				<label for="department">Department:</label>
+				<select id="department" th:field="*{department}" class="form-control">
+					<option value="HR">HR</option>
+					<option value="IT">IT</option>
+					<option value="Finance">Finance</option>
+					<option value="Sales">Sales</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>
+					<input type="checkbox" th:field="*{agreeToTerms}" />I agree to the terms and condition
+				</label>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-danger">Register</button>
+			</div>
+		</div>
+</div>
+
+
+
+
+
+</form>
+</div>
+
+</body>
+
+</html>

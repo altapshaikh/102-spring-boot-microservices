@@ -1,0 +1,3 @@
+id   name     acc_no    current_balance   action
+1    raja     1111       80000            debit
+2    rani     2222       200000           debit

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;application-dev.properties&apos; to &apos;19-spring-boot-profiles/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;19-spring-boot-profiles&apos;&#x0D;&#x0A;- Destination element: &apos;19-spring-boot-profiles/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;application-dev.properties&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src\/main\/resources=/maven.pomderived=/true=/=/optional=/true=/" element1="src/main/resources/templates/application-dev.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1735227505298" units="0" version="1.0"/>
+</session>

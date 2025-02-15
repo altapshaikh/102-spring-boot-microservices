@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Fetch All employee</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
+<style>
+	tr:hover {background-color: crimson;}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg bg-primary">
+	  <div class="container-fluid">
+	    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	      <div class="navbar-nav">
+	        <a class="nav-link  bg-dark" aria-current="page" th:href="@{/list}">
+				<button type="button" class="btn btn-danger">Home</button></a>
+				
+				<a class="nav-link  bg-dark" aria-current="page" th:href="@{/register}">
+							<button type="button" class="btn btn-danger">Register</button></a>
+							
+				<a class="nav-link  bg-dark" aria-current="page" th:href="@{/logout}">
+							<button type="button" class="btn btn-danger">Log out</button></a>
+	        
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+	
+	<h1>All Employee: </h1>
+	
+	<div class="container">
+	<table class="table table-striped display"   id="example"  style="width:100%">
+	<thead style="background-color: crimson;">
+		<tr>
+			<th>Id</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Gender</th>
+			<th>Department</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="employee : ${employees}">
+			<td th:text="${employee.empId}"></td>
+			<td th:text="${employee.firstName}"></td>
+			<td th:text="${employee.lastName}"></td>
+			<td th:text="${employee.email}"></td>
+			<td th:text="${employee.gender}"></td>
+			<td th:text="${employee.department}"></td>
+			<td >
+				<a th:href="@{/edit/{id}(id=${employee.empId})}">
+					<button type="button" class="btn btn-success">Edit</button></a>
+					
+					<a th:href="@{/delete/{id}(id=${employee.empId})}">
+										<button type="button" class="btn btn-danger">Delete</button></a>
+			
+			</td>
+			
+		</tr>
+	</tbody>
+	</table>
+	</div>
+</body>
+<script>
+	new DataTable('#example');
+</script>
+
+</html>
