@@ -89,15 +89,13 @@ public class MakeMyTripTrainServiceImpl implements MakeMyTripTrainService {
 	@Override
 	public Mono<TicketResponse> getTicketById(Long id) {
 	  Mono<ResponseEntity<TicketResponse>> entity = webClient.get()
-			      .header(null, null)
+			     
 				.uri("/ticket/"+id)
 				.retrieve()
 				.toEntity(TicketResponse.class);
+	return null;
 	  
-	  entity.subscribe(data-> {
-		  TicketResponse body = data.getBody();
-	  })
-
+	 
 	}
 
 }
