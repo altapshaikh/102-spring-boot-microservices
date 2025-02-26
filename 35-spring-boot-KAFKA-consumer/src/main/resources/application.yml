@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 35-spring-boot-KAFKA
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: my-group
+  port: 4141
+
