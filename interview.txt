@@ -1,0 +1,236 @@
+architecture
+====================
+jvm jre
+memory area
+how class loaded in jvm
+set classpath
+
+constructor
+==========================
+constructor chaing
+param constructor
+use of constructor
+=============================
+oops
+===========================
+encapasulation (pojo)
+abstraction  
+why abstraction is required
+object is created abstract class
+diff btween abstraction and interface
+after java 8 what is diff between abstraction interface
+=============================================
+polymorphism
+compile and runtime
+overloading overding
+inheritance
+=============================
+why java will not support inheritance
+what if you extend multiple classes
+parent and child class scenario
+super and this
+
+realtime show
+
+exception
+=========================
+can you please tell me 5/10 runtime exception and compile time class name
+how you can create custom exception class
+how you handle exception in your project
+exception and errors
+try
+catch
+try with resource
+funally
+final finally finalize
+try error is occured then catch also have error then what will happen
+global exception
+============================================
+collection
+list--->arraylist and linked list---
+set----> (unique value)
+tree ---->
+map--->concurrent hashmap--->weak hashmap---
+internal impl of hashmap---
+vector
+stack
+queue
+marker interface
+hashtabel
+================================
+java 8 and 17 features
+functional interface
+name of functional interface
+predicate consumer function supplier
+create custom functional interface
+lambda interface
+datetime api
+optional class
+stream api
+default static method in interface
+paraller stream
+filter
+map
+collections
+grouping by
+flatmap
+method reference
+constructor referance
+logical coding java 8
+java 17 features
+==================================
+logical coding----for loop
+===========================================
+spring boot and microservices
+======================================
+diff between spring and spring boot and spring mvc
+spring di
+IOC
+lifecycle of ioc container
+type of dependecy injection
+when to use which dependecy injection
+bean lifecycle
+scope of the beans
+@Bean   m1() m2()
+default scope of bean
+@qulifier
+scenario of qulifier
+@Primary
+@configuration
+=========================spring boot mvc============
+what is a frontcontroller
+in spring frontcontroller name
+lifecycle of dispatcher servlet
+model and view
+validation
+exception in mvc
+what is mean by mvc or mvc design pattern
+form handeling
+@controller
+thymeleaf
+http filter
+session management
+user or roles handeling
+what is mean by error pages
+how to design custom error pages
+================spring boot data jpa============================
+ what is mean by jpa
+ hibernate vs jpa
+ crudreposiotry and jpa repository and paging and sorting repository
+ entity
+ what is mean by generated value
+ what is mean by startegy
+ how to create custom primary
+ @table
+ @id
+ @column
+ how you can custo quieries in spring boot jpa
+ what is repository
+ @query
+ findXXX
+ how we can work with relationships in jpa
+ then how transaction mgnt
+ save saveall
+ i want to create and update the record wich method u ar goign to use
+ how data migrartion will happen
+ ====================================================
+ spring rest
+ =====================================
+ @controller and @restcontroller
+ lifecycle of spring boot rest
+ @getMapping and @RequetsMapping
+ @requestBody
+ @validation
+ responseentity
+ status code
+ postman
+ swagger
+ wsdl
+ exception handeling in spring boot rest
+ @controller advice
+ global exception
+ how to create custom error  msg
+ get vs post vs put vs delete vs trace vs head vs patch
+ consumer 
+ producer
+ diff between soap and rest
+ xml---->json
+ jackson
+ jax-b
+ Gson
+ =====================database====================================
+ nth highest salary
+ primary key foreign key
+ joins
+ trigger
+ normalization
+ cursor
+ plsql
+ =======================AWS====================================
+ EC2,S3, ECS,IAM, VPC, RDS, DYNAMODB
+ =============================================================
+
+ ====================== DEVOPS TOOLS==================
+ DOCKER
+ JENKINS
+ KUBERNATES
+ ========================TOOLS==============================
+ log4j
+ junit
+ winscp
+ swagger
+ kafka
+ ======================kafka============================
+ what is kafka
+ what is zookeeper
+ what is topic and how create topic
+ then prodcuer and consumer
+ what is parttion
+ how to cteate partition
+ what is replication factor
+ if leader  node is failed then how data recovery will happen
+ SSL hndeling in KAFKA
+ how msg will be stores
+ if zookeeper is not there can we run kafka   (KRAFT)
+ prepare use case (where you have used kafka in your projects) 
+consumer grouping
+========================================================
+===================UI===============================
+html and html5 
+css
+javascript
+angular /react
+
+============================microservices===================================
+what is monolithic ans microservices
+microservices is tech or design pattern
+on which basis you can define ms architecture
+then how interservice communication happen in 2 ms
+then best practices of ms
+how we can check the health of ms
+session handleing in ms
+http interceptor in ms
+explain jwt or token bases authetication
+can we use 1 db to al ms or each one have separate
+how to handle user in ms
+load balacner
+api gateway
+routing
+if one ms is failing how to check and handle
+track the request in ms communication
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
